@@ -6,19 +6,19 @@
 #    By: fileonar <fileonar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/08 18:19:50 by fileonar          #+#    #+#              #
-#    Updated: 2024/12/09 14:12:51 by fileonar         ###   ########.fr        #
+#    Updated: 2025/01/03 14:32:48 by fileonar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = cc
 LIBMLX = ./MLX42
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra -g
 LIB = -lft -Llibft/ -lmlx42 -L$(LIBMLX)/build -lglfw
 HEADER = -I $(LIBMLX)/include -I libft/
 
 NAME = so_long
 DEPS = so_long.h 
-SRC = main.c
+SRC = main.c misc.c get_map.c parse_map.c main_menu.c
 
 OBJS = $(SRC:%.c=bin/%.o)
 
